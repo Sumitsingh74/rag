@@ -5,6 +5,9 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
 from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain.retrievers.multi_query import MultiQueryRetriever
+from langchain_community.vectorstores import FAISS
+from langchain_core.documents import Document
 
 load_dotenv()
 
@@ -43,3 +46,5 @@ chain = prompt | model2 | parser
 # Run the chain
 result = chain.invoke({'docs': ", ".join(email_list)})
 print(result)
+
+

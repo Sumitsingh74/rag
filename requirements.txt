@@ -30,6 +30,8 @@ beautifulsoup4
 langchain_experimental
 chromadb
 pymongo
+faiss-cpu
+
 
 # Machine Learning Utilities
 numpy
