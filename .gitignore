@@ -1,0 +1,44 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.venv/
+
+# Environment variables
+.env
+
+# VSCode settings
+.vscode/
+
+# macOS / Linux / Windows system files
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# PyCharm-specific
+.idea/
+
+# Log files and cache
+*.log
+*.cache
+
+# PDF or large datasets (optional — if not versioning them)
+*.pdf
+
+# Python wheels / builds
+*.egg-info/
+dist/
+build/
+
+# LangChain caches (if any)
+.cache/
+langchain.db
+
+# Ignore test outputs or temporary files
+*.tmp
+*.bak
