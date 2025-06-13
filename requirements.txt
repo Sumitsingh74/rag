@@ -28,7 +28,7 @@ langchain-community
 pypdf
 beautifulsoup4
 langchain_experimental
-
+chromadb
 
 # Machine Learning Utilities
 numpy
