@@ -29,6 +29,7 @@ pypdf
 beautifulsoup4
 langchain_experimental
 chromadb
+pymongo
 
 # Machine Learning Utilities
 numpy

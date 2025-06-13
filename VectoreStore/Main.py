@@ -1,5 +1,6 @@
 from langchain_openai import OpenAIEmbeddings
 from langchain_together import TogetherEmbeddings
+from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_community.vectorstores import Chroma
 from langchain.schema import Document
 from dotenv import load_dotenv
@@ -36,13 +37,22 @@ doc5 = Document(
 docs = [doc1, doc2, doc3, doc4, doc5]
 
 # Create vector store using new API
+embedding = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
 vector_store = Chroma.from_documents(
     documents=docs,
-    embedding=TogetherEmbeddings(),
+    embedding=OpenAIEmbeddings(),
     persist_directory="my_chroma_db",
     collection_name="sample"
 )
 # vector_store.add_documents(docs)
 
 # vector_store.persist()
-print(vector_store.get(include=['embeddings','documents', 'metadatas']))
+# print(vector_store.get(include=['embeddings','documents', 'metadatas']))
+
+print(vector_store.similarity_search(
+    query='who is the bolwer?',
+    k=2
+))
+
+
+# https://colab.research.google.com/drive/1VwOywJ9LPSIpKWKj9vueVoexSCzGHXNC?usp=sharing#scrollTo=nG7XjDXwg0JZ
