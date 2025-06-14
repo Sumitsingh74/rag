@@ -31,6 +31,8 @@ langchain_experimental
 chromadb
 pymongo
 faiss-cpu
+youtube-transcript-api
+
 
 
 # Machine Learning Utilities
