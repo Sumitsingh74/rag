@@ -32,7 +32,8 @@ chromadb
 pymongo
 faiss-cpu
 youtube-transcript-api
-
+duckduckgo-search
+langchain_experimental
 
 
 # Machine Learning Utilities
