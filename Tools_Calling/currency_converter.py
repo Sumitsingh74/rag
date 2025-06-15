@@ -10,8 +10,6 @@ load_dotenv()
 
 import requests
 
-
-
 @tool
 def get_conversion_factor(base_currency: str, target_currency: str) -> float:
     """
